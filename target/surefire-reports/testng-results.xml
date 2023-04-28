@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="0" passed="0" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="٢٠٢٣-٠٢-٠٨T١٢:١٣:٣٦ EET" name="TestCases" finished-at="٢٠٢٣-٠٢-٠٨T١٢:١٣:٣٦ EET" duration-ms="25">
+    <groups>
+    </groups>
+    <test started-at="٢٠٢٣-٠٢-٠٨T١٢:١٣:٣٦ EET" name="Command line test" finished-at="٢٠٢٣-٠٢-٠٨T١٢:١٣:٣٦ EET" duration-ms="25">
+    </test> <!-- Command line test -->
+  </suite> <!-- TestCases -->
+</testng-results>
