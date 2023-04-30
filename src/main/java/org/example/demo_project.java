@@ -3,6 +3,7 @@ package org.example;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.testng.Assert;
 
 import java.time.Duration;
 
@@ -15,6 +16,8 @@ public class demo_project {
         driver.get("https://rahulshettyacademy.com/loginpagePractise/");
         driver.findElement(By.id("signInBtn")).click();
         System.out.println(driver.findElement(By.xpath("//*[@id=\"login-form\"]/div[1]")).getText());
+        Assert.assertEquals(driver.findElement(By.xpath("//*[@id=\"login-form\"]/div[1]")).getText(),
+                "Incorrect username/password.");
 
 //try to log in when email and password fields are empty and print error message on the screen
         driver.findElement(By.id("usertype")).click();
@@ -29,7 +32,8 @@ public class demo_project {
         driver.findElement(By.id("password")).sendKeys("learning");
         driver.findElement(By.id("terms")).click();
         driver.findElement(By.id("signInBtn")).click();
-        System.out.println(driver.findElement(By.xpath("//div[@class='alert alert-danger col-md-12']")).getText());
+        System.out.println(driver.findElement(By.xpath("//div[@class='alert alert-danger col-md-12']"))
+                .getText());
 
 //try to log in using valid username and invalid password and print error message
         driver.findElement(By.id("username")).clear();
@@ -42,7 +46,8 @@ public class demo_project {
         driver.findElement(By.id("password")).sendKeys("learninj");
         driver.findElement(By.id("terms")).click();
         driver.findElement(By.id("signInBtn")).click();
-        System.out.println(driver.findElement(By.xpath("//div[@class='alert alert-danger col-md-12']")).getText());
+        System.out.println(driver.findElement(By.xpath("//div[@class='alert alert-danger col-md-12']"))
+                .getText());
 
 //try to log in using valid both username and password
         driver.findElement(By.id("username")).clear();
